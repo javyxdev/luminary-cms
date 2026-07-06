@@ -71,20 +71,20 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label class="form-label">Título Principal</label>
-                                <input type="text" class="form-control" name="hero_title" value="{{ $settings['hero_title'] }}">
+                                <input type="text" class="form-control" name="hero_title" value="{{ $settings['hero_title'] ?? '' }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Subtítulo</label>
-                                <textarea class="form-control" name="hero_subtitle" rows="2">{{ $settings['hero_subtitle'] }}</textarea>
+                                <textarea class="form-control" name="hero_subtitle" rows="2">{{ $settings['hero_subtitle'] ?? '' }}</textarea>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Texto del Botón (CTA)</label>
-                                    <input type="text" class="form-control" name="hero_cta_text" value="{{ $settings['hero_cta_text'] }}">
+                                    <input type="text" class="form-control" name="hero_cta_text" value="{{ $settings['hero_cta_text'] ?? '' }}">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="form-label">Enlace del Botón</label>
-                                    <input type="text" class="form-control" name="hero_cta_link" value="{{ $settings['hero_cta_link'] }}">
+                                    <input type="text" class="form-control" name="hero_cta_link" value="{{ $settings['hero_cta_link'] ?? '' }}">
                                 </div>
                             </div>
 
@@ -193,15 +193,15 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label class="form-label">Email de Contacto</label>
-                                <input type="email" class="form-control" name="contact_email" value="{{ $settings['contact_email'] }}">
+                                <input type="email" class="form-control" name="contact_email" value="{{ $settings['contact_email'] ?? '' }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Facebook URL</label>
-                                <input type="url" class="form-control" name="footer_facebook" value="{{ $settings['footer_facebook'] }}">
+                                <input type="url" class="form-control" name="footer_facebook" value="{{ $settings['footer_facebook'] ?? '' }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Instagram URL</label>
-                                <input type="url" class="form-control" name="footer_instagram" value="{{ $settings['footer_instagram'] }}">
+                                <input type="url" class="form-control" name="footer_instagram" value="{{ $settings['footer_instagram'] ?? '' }}">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">TikTok URL</label>
@@ -209,7 +209,7 @@
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Texto Copyright (Footer)</label>
-                                <input type="text" class="form-control" name="footer_text" value="{{ $settings['footer_text'] }}">
+                                <input type="text" class="form-control" name="footer_text" value="{{ $settings['footer_text'] ?? '' }}">
                             </div>
                         </div>
                     </div>
