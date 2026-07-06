@@ -6,7 +6,7 @@
 @section('content')
 
 {{-- Page Header --}}
-<div class="lmn-bg-navy py-15 text-center">
+<div class="lmn-bg-navy py-10 md:py-16 text-center">
 
     {{-- Breadcrumb --}}
     <div class="flex items-center justify-center gap-2 mb-4 text-xs tracking-widest uppercase" style="color: rgba(255,255,255,0.3);">

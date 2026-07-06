@@ -6,7 +6,7 @@
 @section('content')
 
 {{-- Page Header --}}
-<div class="lmn-bg-navy py-15 text-center">
+<div class="lmn-bg-navy py-10 md:py-16 text-center">
     <h1 class="font-display font-black uppercase text-white" style="font-size: clamp(3rem, 8vw, 6rem);">
         SOCIAL <span class="lmn-text-cyan">HUB</span>
     </h1>
@@ -42,7 +42,7 @@
             {{-- Redes Sociales --}}
             <div>
                 <p class="text-white/30 text-xs uppercase tracking-widest mb-4">Síguenos</p>
-                <div class="flex gap-4">
+                <div class="flex flex-wrap gap-4">
                     @if(!empty($settings['footer_instagram']))
                     <a href="{{ $settings['footer_instagram'] }}" target="_blank" rel="noopener"
                        class="flex items-center gap-2 lmn-card px-4 py-3 rounded-xl text-white/60 hover:text-white transition-colors">

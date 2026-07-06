@@ -6,7 +6,7 @@
 @section('content')
 
 {{-- ── Page Header ──────────────────────────────────────────────── --}}
-<div class="lmn-bg-navy py-15 text-center">
+<div class="lmn-bg-navy py-10 md:py-16 text-center">
     <h1 class="font-display font-black uppercase text-white" style="font-size: clamp(3rem, 8vw, 6rem);">
         NUESTRAS <span class="lmn-text-cyan">ALIANZAS</span>
     </h1>

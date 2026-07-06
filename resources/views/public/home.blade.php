@@ -30,8 +30,8 @@
     }
 @endphp
 
-<section class="relative flex items-center justify-center overflow-hidden"
-         style="height: 100vh; margin-top: -7rem;"
+<section class="relative flex items-center justify-center overflow-hidden -mt-20 md:-mt-28"
+         style="height: 100vh;"
          @if($heroBgType === 'slider' && count($heroSlides) > 1) x-data="heroSlider({{ json_encode($heroSlides) }})" x-init="init()" @endif>
 
     {{-- ── Background ── --}}
@@ -137,11 +137,11 @@
 
 {{-- ───────────────────────── EXPERIENCIA ──────────────────────── --}}
 @if($about)
-<section class="py-24" style="background-color: #f4f4f6;">
+<section class="py-12 md:py-24" style="background-color: #f4f4f6;">
     <div class="max-w-7xl mx-auto px-5 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
         {{-- Texto --}}
-        <div>
+        <div class="text-center md:text-left">
             <h2 class="lmn-section-title text-5xl md:text-6xl mb-6" style="color: var(--lmn-dark);">
                 {{ $about->title ?? 'EXPERIENCIA ÍNTIMA' }}
             </h2>
@@ -166,8 +166,8 @@
             @endif
 
             {{-- Stats overlay --}}
-            <div class="absolute -bottom-6 -left-6 lmn-bg-navy rounded-xl p-6 shadow-2xl border border-white/10">
-                <div class="flex gap-8">
+            <div class="absolute bottom-4 left-4 right-4 md:right-auto md:-bottom-6 md:-left-6 lmn-bg-navy rounded-xl p-4 md:p-6 shadow-2xl border border-white/10">
+                <div class="flex gap-4 md:gap-8">
                     <div>
                         <p class="font-display text-5xl text-white font-black">+{{ $djsCount }}</p>
                         <p class="text-white/50 text-xs mt-1 max-w-[120px] leading-snug">DJs y productores aliados</p>
