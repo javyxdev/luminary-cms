@@ -146,7 +146,7 @@
                 {{ $about->title ?? 'EXPERIENCIA ÍNTIMA' }}
             </h2>
             <p class="text-gray-600 leading-relaxed mb-8 text-base">
-                {{ $about->content }}
+                {{ str($about->content)->limit(500) }}
             </p>
             <a href="{{ route('nosotros') }}" class="lmn-btn lmn-btn-outline" style="color: var(--lmn-dark); border-color: var(--lmn-dark);">
                 Conoce más

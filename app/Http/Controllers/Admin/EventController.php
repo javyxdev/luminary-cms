@@ -13,7 +13,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::latest('event_date')->get();
+        $events = Event::orderBy('id', 'desc')->get();
         return view('admin.events.index', compact('events'));
     }
 

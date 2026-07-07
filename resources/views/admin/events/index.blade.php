@@ -39,7 +39,14 @@
                     @foreach($events as $event)
                     <tr>
                         <td>
-                            <span class="avatar avatar-md" style="background-image: url({{ asset('storage/' . $event->image_path) }})"></span>
+                            @if(!empty($event->image_path))
+                            <span class="avatar avatar-md poster-preview" role="button"
+                                  style="background-image: url({{ asset('storage/' . $event->image_path) }}); cursor: pointer;"
+                                  data-image="{{ asset('storage/' . $event->image_path) }}"
+                                  data-title="{{ $event->title }}"></span>
+                            @else
+                            <span class="avatar avatar-md"></span>
+                            @endif
                         </td>
                         <td>{{ $event->title }}</td>
                         <td>{{ $event->event_date->format('d/m/Y H:i') }}</td>
@@ -74,7 +81,20 @@
 <script>
     $(document).ready(function() {
         $('#eventsTable').DataTable({
-            "order": [[ 2, "desc" ]]
+            "order": []
+        });
+
+        // Vista previa del póster en modal al hacer click
+        $(document).on('click', '.poster-preview', function() {
+            Swal.fire({
+                imageUrl: $(this).data('image'),
+                imageAlt: $(this).data('title'),
+                title: $(this).data('title'),
+                showConfirmButton: false,
+                showCloseButton: true,
+                width: 'auto',
+                background: '#ffffff'
+            });
         });
     });
 </script>
